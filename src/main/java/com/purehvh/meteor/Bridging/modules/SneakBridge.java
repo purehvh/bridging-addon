@@ -53,8 +53,6 @@ public class SneakBridge extends Module {
         }
         Vec3d pos = mc.player.getPos().add(0, -0.5, 0);
         BlockPos bPos = BlockPos.ofFloored(pos);
-        LOG.warn(bPos.toString());
-        mc.player.sendMessage(Text.of(bPos.toString()), false);
         this.shallSneak = mc.world.getBlockState(bPos).isReplaceable();
         mc.options.sneakKey.setPressed(this.shallSneak);
     }
