@@ -1,24 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "bridging-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "Bridging Addon",
+  "description": "An addon for bridging Meteor Client addons.",
   "authors": [
-    "seasnail"
+    "AlexNomad"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/purehvh/meteor-bridging"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/bridging-addon/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "com.purehvh.meteor.Bridging.BridgingAddon"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25"
