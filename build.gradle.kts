@@ -1,5 +1,6 @@
 plugins {
     id("fabric-loom") version "1.9-SNAPSHOT"
+    kotlin("jvm")
 }
 
 base {
@@ -17,6 +18,7 @@ repositories {
         name = "meteor-maven-snapshots"
         url = uri("https://maven.meteordev.org/snapshots")
     }
+    mavenCentral()
 }
 
 dependencies {
@@ -27,6 +29,8 @@ dependencies {
 
     // Meteor
     modImplementation("meteordevelopment:meteor-client:${properties["minecraft_version"] as String}-SNAPSHOT")
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.13.1+kotlin.2.1.10")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks {
@@ -49,12 +53,13 @@ tasks {
     }
 
     java {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
     }
 
     withType<JavaCompile> {
         options.encoding = "UTF-8"
         options.release = 21
     }
+}
+kotlin {
+    jvmToolchain(21)
 }

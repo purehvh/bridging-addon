@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.purehvh.meteor.Bridging",
+  "package": "com.purehvh.meteor.bridging",
   "compatibilityLevel": "JAVA_21",
   "client": [
   ],
