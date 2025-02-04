@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.purehvh.meteor.bridging.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "priority": 10000,
+  "client": [
+    "ClientPlayerEntityMixin",
+    "KeyboardInputMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
