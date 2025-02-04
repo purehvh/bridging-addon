@@ -2,7 +2,6 @@ package com.purehvh.meteor.bridging.mixin;
 
 import com.purehvh.meteor.bridging.modules.SneakBridge;
 import meteordevelopment.meteorclient.systems.modules.Modules;
-import meteordevelopment.meteorclient.systems.modules.movement.Sneak;
 import net.minecraft.client.input.Input;
 import net.minecraft.client.input.KeyboardInput;
 import net.minecraft.util.PlayerInput;

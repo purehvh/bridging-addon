@@ -1,4 +1,4 @@
-package com.purehvh.meteor.bridging.modules
+package com.purehvh.meteor.bridging.hud
 
 import com.purehvh.meteor.bridging.BridgingAddon
 import meteordevelopment.meteorclient.systems.hud.HudElement
