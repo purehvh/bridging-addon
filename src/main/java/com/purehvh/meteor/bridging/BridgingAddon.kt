@@ -2,6 +2,7 @@ package com.purehvh.meteor.bridging
 
 import com.mojang.logging.LogUtils
 import com.purehvh.meteor.bridging.hud.BridgerHud
+import com.purehvh.meteor.bridging.modules.GodBridge
 import com.purehvh.meteor.bridging.modules.SneakBridge
 import meteordevelopment.meteorclient.addons.GithubRepo
 import meteordevelopment.meteorclient.addons.MeteorAddon
@@ -17,6 +18,7 @@ class BridgingAddon : MeteorAddon() {
 
         // Modules
         Modules.get().add(SneakBridge())
+        Modules.get().add(GodBridge())
         Hud.get().register(BridgerHud.INFO)
     }
 

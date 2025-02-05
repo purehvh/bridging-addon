@@ -1,5 +1,6 @@
 package com.purehvh.meteor.bridging.mixin;
 
+import com.purehvh.meteor.bridging.modules.GodBridge;
 import com.purehvh.meteor.bridging.modules.SneakBridge;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.input.Input;
@@ -14,14 +15,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class KeyboardInputMixin extends Input {
     @Inject(method = "tick", at = @At("TAIL"))
     private void isPressed(CallbackInfo ci) {
-        if (Modules.get().get(SneakBridge.class).doVanilla()) playerInput = new PlayerInput(
-            playerInput.forward(),
-            playerInput.backward(),
-            playerInput.left(),
-            playerInput.right(),
-            playerInput.jump(),
-            true,
-            playerInput.sprint()
-        );
+        if (Modules.get().get(SneakBridge.class).doVanilla() || Modules.get().get(GodBridge.class).getDoShift())
+            playerInput = new PlayerInput(
+                playerInput.forward(),
+                playerInput.backward(),
+                playerInput.left(),
+                playerInput.right(),
+                playerInput.jump(),
+                true,
+                playerInput.sprint()
+            );
     }
 }

@@ -5,7 +5,8 @@
   "priority": 10000,
   "client": [
     "ClientPlayerEntityMixin",
-    "KeyboardInputMixin"
+    "KeyboardInputMixin",
+    "MinecraftClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -32,7 +32,7 @@ class SneakBridge : Module(BridgingAddon.CATEGORY, "sneak-bridge", "Auto Sneak B
     }
 
     @EventHandler
-    fun onTick(event: TickEvent.Pre?) {
+    fun onTick(event: TickEvent.Pre) {
         if (mc.world == null || mc.player == null) {
             return
         }
